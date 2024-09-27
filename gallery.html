@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Brian Lee's artwork gallery" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Brian Lee's Gallery</title>
+    <style>
+        .carousel-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .carousel-slide {
+            display: none;
+            text-align: center;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+        }
+        
+        .carousel-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        .carousel-button.prev {
+            left: 10px;
+        }
+        
+        .carousel-button.next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Brian Lee's Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="digitalmedia.html">Digital Media</a></li>
+                    <li><a href="exercise3.html">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- will be updated before end of semester -->
+        <main>
+            <section id="artwork-gallery">
+                <h2>My Artwork</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="/api/placeholder/600/400" alt="Artwork 1" />
+                        <p>Japanese Animation Inspired Piece</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/api/placeholder/600/400" alt="Artwork 2" />
+                        <p>Bleach Poster Remix</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/api/placeholder/600/400" alt="Artwork 3" />
+                        <p>Character Design Study</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/api/placeholder/600/400" alt="Artwork 4" />
+                        <p>Manga-Style Illustration</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/api/placeholder/600/400" alt="Artwork 5" />
+                        <p>Abstract Digital Art</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/api/placeholder/600/400" alt="Artwork 6" />
+                        <p>UI Design Concept</p>
+                    </div>
+                    <a href="#" class="carousel-button prev">&#10094;</a>
+                    <a href="#" class="carousel-button next">&#10095;</a>
+                </div>
+            </section>
+
+            <section id="artwork-description">
+                <h2>About My Art</h2>
+                <p>
+                    My artwork is heavily influenced by modern Japanese animation and manga. I explore various digital art techniques to create visually striking pieces that blend traditional anime aesthetics with contemporary design elements. Each piece in this gallery
+                    represents my journey as an artist and my passion for creating engaging visual experiences.
+                </p>
+                <p>
+                    From character designs to abstract digital compositions, my work showcases a range of styles and techniques. I'm particularly interested in how digital art can be used to enhance user interfaces and create immersive digital experiences.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="mailto:blee478@gatech.edu">Email</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/brianlee" target="_blank" rel="noopener noreferrer">LinkedIn</a
+              >
+            </li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+                    <li>
+                        <a href="https://github.com/brianlee" target="_blank" rel="noopener noreferrer">GitHub</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <p>&copy; 2024 Brian Lee. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- w3 school -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const prevButton = document.querySelector(".carousel-button.prev");
+        const nextButton = document.querySelector(".carousel-button.next");
+        let currentSlide = 0;
+
+        function showSlide(n) {
+          slides[currentSlide].classList.remove("active");
+          currentSlide = (n + slides.length) % slides.length;
+          slides[currentSlide].classList.add("active");
+        }
+
+        prevButton.addEventListener("click", () => showSlide(currentSlide - 1));
+        nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
+      });
+    </script>
+  </body>
+</html>
