@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Brian Lee's artwork gallery" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Avant+Garde+Gothic"
+      rel="stylesheet"
+    />
     <title>Brian Lee's Gallery</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <header>
-            <h1>Brian Lee's Gallery</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="digitalmedia.html">Digital Media</a></li>
-                    <li><a href="exercise3.html">Projects</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- will be updated before end of semester -->
-        <main>
-            <section id="artwork-gallery">
-                <h2>My Artwork</h2>
-                <div class="carousel-container">
-                    <div class="carousel-slide active">
-                        <img src="/api/placeholder/600/400" alt="Artwork 1" />
-                        <p>Japanese Animation Inspired Piece</p>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/api/placeholder/600/400" alt="Artwork 2" />
-                        <p>Bleach Poster Remix</p>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/api/placeholder/600/400" alt="Artwork 3" />
-                        <p>Character Design Study</p>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/api/placeholder/600/400" alt="Artwork 4" />
-                        <p>Manga-Style Illustration</p>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/api/placeholder/600/400" alt="Artwork 5" />
-                        <p>Abstract Digital Art</p>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/api/placeholder/600/400" alt="Artwork 6" />
-                        <p>UI Design Concept</p>
-                    </div>
-                    <a href="#" class="carousel-button prev">&#10094;</a>
-                    <a href="#" class="carousel-button next">&#10095;</a>
-                </div>
-            </section>
+      <!-- Navbar -->
+      <div class="navbar">
+        <img src="media/logo.png" alt="Brian Lee Logo" class="nav-icon" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
 
-            <section id="artwork-description">
-                <h2>About My Art</h2>
-                <p>
-                    My artwork is heavily influenced by modern Japanese animation and manga. I explore various digital art techniques to create visually striking pieces that blend traditional anime aesthetics with contemporary design elements. Each piece in this gallery
-                    represents my journey as an artist and my passion for creating engaging visual experiences.
-                </p>
-                <p>
-                    From character designs to abstract digital compositions, my work showcases a range of styles and techniques. I'm particularly interested in how digital art can be used to enhance user interfaces and create immersive digital experiences.
-                </p>
-            </section>
-        </main>
+      <!-- Gallery Section -->
+      <main>
+        <section id="artwork-gallery">
+          <h2>My Gallery</h2>
+          <div class="carousel-container">
+            <div class="carousel-slide active">
+              <img src="media/Lee_002_Final_Remix.jpg" alt="Artwork 1" />
+              <p>Bleach Poster Remix</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="media/Lee_003_Final_Comp.jpg" alt="Artwork 2" />
+              <p>Photos I Took</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="media/Lee_006_Variation-05.jpg" alt="Artwork 3" />
+              <p>Initial Logo Design</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="media/Lee_008_AppIcon_Draft.jpg" alt="Artwork 4" />
+              <p>App Icon Mock-Up</p>
+            </div>
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+          </div>
+        </section>
 
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="mailto:blee478@gatech.edu">Email</a></li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/brianlee" target="_blank" rel="noopener noreferrer">LinkedIn</a
+        <!-- Description Section -->
+        <section id="artwork-description">
+          <h2>About My Art</h2>
+          <p>
+            My artwork is a fusion of traditional anime aesthetics and
+            contemporary digital techniques. I aim to create visuals that tell a
+            story while pushing the boundaries of digital media.
+          </p>
+          <p>
+            From character designs inspired by Japanese animation to innovative
+            user interface concepts, my work reflects my dedication to blending
+            artistry with technology. Each piece showcases my growth as a
+            designer and my commitment to crafting meaningful experiences.
+          </p>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="mailto:blee478@gatech.edu">Email</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/brianlee"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
               >
             </li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
-                    <li>
-                        <a href="https://github.com/brianlee" target="_blank" rel="noopener noreferrer">GitHub</a
+            <li>
+              <a
+                href="https://github.com/brianlee"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
               >
             </li>
           </ul>
@@ -87,22 +98,36 @@
       </footer>
     </div>
 
-    <!-- w3 school -->
+    <!-- Carousel JavaScript -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const slides = document.querySelectorAll(".carousel-slide");
         const prevButton = document.querySelector(".carousel-button.prev");
         const nextButton = document.querySelector(".carousel-button.next");
         let currentSlide = 0;
+        const transitionTime = 2000; // Time interval in milliseconds
 
-        function showSlide(n) {
-          slides[currentSlide].classList.remove("active");
-          currentSlide = (n + slides.length) % slides.length;
-          slides[currentSlide].classList.add("active");
+        function updateSlides() {
+          slides.forEach((slide, index) => {
+            slide.classList.toggle("active", index === currentSlide);
+          });
         }
 
-        prevButton.addEventListener("click", () => showSlide(currentSlide - 1));
-        nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
+        function showNextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateSlides();
+        }
+
+        function showPrevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateSlides();
+        }
+
+        prevButton.addEventListener("click", showPrevSlide);
+        nextButton.addEventListener("click", showNextSlide);
+
+        // Automatic Slide Transition
+        setInterval(showNextSlide, transitionTime);
       });
     </script>
   </body>

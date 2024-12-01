@@ -6,51 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Brian Lee's personal homepage" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Brian Lee's Homepage</title>
+    <link href="https://fonts.googleapis.com/css?family=Avant+Garde+Gothic" rel="stylesheet">
+
+    <title>Brian Lee - Web Designer & Developer</title>
+    <style>
+        main {
+            padding: 10px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <h1>Brian Lee's Homepage</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="digitalmedia.html">Digital Media</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <!--will change direction for final edit-->
-                </ul>
-            </nav>
-        </header>
+    <header class="intro-banner">
+        <div class="intro-content">
+            <h1>Welcome to Brian Lee's Portfolio</h1>
+            <p>
+                Discover my journey as a Front-End Developer and Designer, explore my projects, and learn more about my passion for creating intuitive and engaging digital experiences.
+            </p>
+        </div>
+    </header>
 
-        <main>
-            <section id="about-me">
-                <h2>About Me</h2>
-                <img src="media/IMG_1627.jpg" alt="Brian Lee" width="300" height="300" />
+    <div class="navbar">
+        <img src="media/logo.png" alt="Logo" class="nav-icon" />
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about-me">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="about-section">
+            <div class="about-container">
+                <img src="media/IMG_1627.jpg" alt="About Me Image" class="about-photo" />
                 <div class="about-text">
+                    <h2>About Me</h2>
                     <p>
                         Hi, I'm Brian Lee, originally from Seoul, South Korea, now residing in Atlanta, Georgia. Currently, I'm a Junior at Georgia Tech, pursuing a degree in Computational Media with a focus on People-Interactive Design.
                     </p>
                     <p>
-                        My passion lies in creating intuitive and engaging digital experiences. I enjoy desiging visual designs and creating artwork inspired by modern day Japanese Animation and manga. I look to get into the field of Web Design and work as a front-end developer
+                        My passion lies in creating intuitive and engaging digital experiences. I enjoy designing visual designs and creating artwork inspired by modern-day Japanese animation and manga. I look to get into the field of web design and work as a front-end developer
                         after college.
                     </p>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="mailto:blee478@gatech.edu">Email</a></li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/brianlee" target="_blank" rel="noopener noreferrer">LinkedIn</a
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="mailto:blee478@gatech.edu">Email</a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/brianlee" target="_blank" rel="noopener noreferrer">LinkedIn</a
               >
             </li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
-                    <li>
-                        <a href="https://github.com/brianlee" target="_blank" rel="noopener noreferrer">GitHub</a
+                <li>
+                    <a href="https://github.com/brianlee" target="_blank" rel="noopener noreferrer">GitHub</a
               >
             </li>
           </ul>
