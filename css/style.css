@@ -1,13 +1,3 @@
-/* General Reset */
-
-@font-face {
-  font-family: "Avant Garde Gothic";
-  src: url(avantgardegothic.woff) format("woff"),
-    url(avantgardegothic.woff2) format("woff2"),
-    url(avantgardegothic.eot) format("embedded-opentype"),
-    url(avantgardegothic.otf) format("opentype");
-}
-
 body,
 h1,
 h2,
@@ -19,7 +9,7 @@ a {
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: "Avant Garde Gothic", "Open Sans", Helvetica, Calibri, sans-serif;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
 }
 
 body {
@@ -157,7 +147,6 @@ h2 {
 .about-text h2 {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #d4a017;
   text-decoration: underline;
   margin-bottom: 15px;
 }
